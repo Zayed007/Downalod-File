@@ -30,7 +30,6 @@ public class DownloadFile {
             Uri downloadUri = Uri.parse(url);
             DownloadManager.Request request = new DownloadManager.Request(downloadUri);
 
-            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI);
             request.allowScanningByMediaScanner();
             request.setDestinationInExternalPublicDir(context.getString(R.string.label_path), fileName);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
